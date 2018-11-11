@@ -4,8 +4,7 @@
 
 **Add multiple classes from CSS module style objects** ✨
 
-Adding multiple classes from CSS module style objects has never been easier
-Or a readable
+Adding multiple classes from CSS module style objects has never been easier and readable
 
 # Installation
 
