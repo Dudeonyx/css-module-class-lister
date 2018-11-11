@@ -7,7 +7,7 @@ describe('Class lister test.', () => {
       App: 'App_App__3TjUG',
       'd-flex-c': 'App_d-flex-c__xpDp1',
       redDiv: 'App_redDiv_fg3AS',
-      blueDiv: 'App_blueDiv_jYaS7',
+      'blue-div': 'App_blue-div_jYaS7',
     };
 
     assert(typeof classLister(sampleStyleObject) === 'function', 'Check return statement');
@@ -46,7 +46,7 @@ describe('Class lister test.', () => {
       App: 'App_App__3TjUG',
       'd-flex-c': 'App_d-flex-c__xpDp1',
       redDiv: 'App_redDiv_fg3AS',
-      blueDiv: 'App_blueDiv_jYaS7',
+      'blue-div': 'App_blue-div_jYaS7',
     };
     const classes = classLister(sampleStyleObject);
     const expectedVal = 'App_App__3TjUG misspelt-class App_redDiv_fg3AS App_blue-div_jYaS7 App_d-flex-c__xpDp1';
@@ -61,12 +61,12 @@ describe('Class lister test.', () => {
       App: 'App_App__3TjUG',
       'd-flex-c': 'App_d-flex-c__xpDp1',
       redDiv: 'App_redDiv_fg3AS',
-      blueDiv: 'App_blueDiv_jYaS7',
+      'blue-div': 'App_blue-div_jYaS7',
     };
     const classes = classLister(sampleStyleObject);
     const expectedVal = 'App_App__3TjUG misspelt-class App_redDiv_fg3AS fake-class App_blue-div_jYaS7 App_d-flex-c__xpDp1';
     assert(
-      classes(['App', 'misspelt-class'], 'redDiv', 'fake-class', ['blueDiv', 'd-flex-c'])
+      classes(['App', 'misspelt-class'], 'redDiv', 'fake-class', ['blue-div', 'd-flex-c'])
         === expectedVal,
       'sub-function not returning spaced string of valid classes when input is arrays and strings mixed'
     );
