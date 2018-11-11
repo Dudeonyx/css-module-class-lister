@@ -18,7 +18,7 @@ const classLister = styleObject => (...classList) => {
 
     return output;
   };
-  classList.reduce(generateClassString, '');
+  return classList.reduce(generateClassString, '');
 };
 
 export default classLister;
