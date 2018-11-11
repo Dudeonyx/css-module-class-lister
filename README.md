@@ -50,6 +50,32 @@ This results in:
 
   ```
 
+It can be used for conditional classes by having your condition statement generate an array of classes which you can spread using ... as arguments for your classes(or whatever you name it function).
+
+E.g.
+
+   ```javascript
+   const myClasses = [];
+   if (condition) {
+     classes.push('a-class', 'b-class');
+   } else {
+     classes.push('b-class', 'c-class');
+   }
+
+   ```
+Then use myClasses like this:
+
+  ```javascript
+  const App = (props) => {
+    return (
+      <div className={classes(...myClasses)}>
+        <p>Blah Blah Blah</p>
+      </div>
+    );
+    }
+  
+  ```
+
 # License
 
 MIT © Dinesh Pandiyan
