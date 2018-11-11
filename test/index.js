@@ -24,7 +24,7 @@ describe('Class lister test.', () => {
     const expectedVal = 'App_App__3TjUG App_d-flex-c__xpDp1';
     assert(
       classes('App', 'bold', 'app', 'div', 'd-flex-c') === expectedVal,
-      'Something went wrong'
+      'sub-function not returning spaced string of valid classes'
     );
   });
 });

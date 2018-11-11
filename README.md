@@ -1,36 +1,54 @@
-# NPM Module Boilerplate
+# CSS Module Class Lister
 
-[![Build Status](https://travis-ci.org/flexdinesh/npm-module-boilerplate.svg?branch=master)](https://travis-ci.org/flexdinesh/npm-module-boilerplate) [![dependencies Status](https://david-dm.org/flexdinesh/npm-module-boilerplate/status.svg)](https://david-dm.org/flexdinesh/npm-module-boilerplate) [![devDependencies Status](https://david-dm.org/flexdinesh/npm-module-boilerplate/dev-status.svg)](https://david-dm.org/flexdinesh/npm-module-boilerplate?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/Dudeonyx/css-module-class-lister.svg?branch=master)](https://travis-ci.org/Dudeonyx/css-module-class-lister) [![dependencies Status](https://david-dm.org/Dudeonyx/css-module-class-lister/status.svg)](https://david-dm.org/Dudeonyx/css-module-class-lister) [![devDependencies Status](https://david-dm.org/Dudeonyx/css-module-class-lister/dev-status.svg)](https://david-dm.org/Dudeonyx/css-module-class-lister?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-**Start developing your NPM module in seconds** ✨
+**Add multiple classes from CSS module style objects** ✨
 
-Readymade boilerplate setup with all the best practices to kick start your npm/node module development.
-
-Happy hacking =)
-
-# Features
-
-* **ES6/ESNext** - Write _ES6_ code and _Babel_ will transpile it to ES5 for backwards compatibility
-* **Test** - _Mocha_ with _Istanbul_ coverage
-* **Lint** - Preconfigured _ESlint_ with _Airbnb_ config
-* **CI** - _TravisCI_ configuration setup
-* **Minify** - Built code will be minified for performance
-
-# Commands
-- `npm run clean` - Remove `lib/` directory
-- `npm test` - Run tests with linting and coverage results.
-- `npm test:only` - Run tests without linting or coverage.
-- `npm test:watch` - You can even re-run tests on file changes!
-- `npm test:prod` - Run tests with minified code.
-- `npm run test:examples` - Test written examples on pure JS for better understanding module usage.
-- `npm run lint` - Run ESlint with airbnb-config
-- `npm run cover` - Get coverage report for your code.
-- `npm run build` - Babel will transpile ES6 => ES5 and minify the code.
-- `npm run prepublish` - Hook for npm. Do all the checks before publishing your module.
+Adding multiple classes from CSS module style objects has never been easier
+Or a readable
 
 # Installation
-Just clone this repo and remove `.git` folder.
 
+    npm install css-module-class-lister
+
+# Usage
+
+  ```javascript
+import React from 'react';
+import styles from './mystyles.module.css'
+import classLister from 'css-module-class-lister';
+
+// console.log(styles);
+// sample console output =>
+// {
+//   App: 'App_App__3TjUG',
+//   'd-flex-c': 'App_d-flex-c__xpDp1',
+// };
+
+const classes = classLister(styles);
+
+const App = (props) => {
+    return (
+      <div className={classes('App', 'bold', 'd-flex-c')}>
+        <p>Blah Blah Blah</p>
+      </div>
+    );
+};
+
+export default App;
+
+  ```
+
+Note: 'bold' is ignored since it is not defined in styles.module.css
+
+This results in:
+
+  ```html
+   <div class="App_App__3TjUG App_d-flex-c__xpDp1">
+     <p>Blah Blah Blah</p>
+   </div>
+
+  ```
 
 # License
 

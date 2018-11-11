@@ -1,7 +1,7 @@
 {
   "name": "css-module-class-lister",
   "version": "1.0.0",
-  "description": "A module to increase ease and readability when adding multiple classes with CSS modules",
+  "description": "A module to increase ease and readability when adding multiple classes from CSS modules",
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
@@ -24,9 +24,11 @@
     "url": "git+https://github.com/Dudeonyx/css-module-class-lister.git"
   },
   "keywords": [
-    "boilerplate",
-    "npm",
+    "css",
     "module",
+    "class",
+    "lister",
+    "react",
     "node",
     "javascript"
   ],

@@ -1,11 +1,15 @@
 /* eslint-disable no-console */
-const defaultAwesomeFunction = require('../lib').default;
-const { awesomeFunction } = require('../lib');
+const classLister = require('../lib').default;
 
-const defaultVal = defaultAwesomeFunction('Dinesh');
-const val = awesomeFunction();
+const sampleStyleObject = {
+  App: 'App_App__3TjUG',
+  'd-flex-c': 'App_d-flex-c__xpDp1',
+};
+const classes = classLister(sampleStyleObject);
 
-// defaultVal === 'I am the Default Awesome Function, fellow comrade! - Dinesh'
-console.log(defaultVal);
-// val === 'I am just an Awesome Function'
-console.log(val);
+const stringOfClasses = classes('App', 'bold', 'app', 'myRedDiv', 'd-flex-c');
+
+// classes === 'function'
+console.log(classes);
+// stringOfClasses === App_App__3TjUG App_d-flex-c__xpDp1'
+console.log(stringOfClasses);
