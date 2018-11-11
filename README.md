@@ -1,6 +1,6 @@
 # CSS Module Class Lister
 
-[![Build Status](https://travis-ci.org/Dudeonyx/css-module-class-lister.svg?branch=master)](https://travis-ci.org/Dudeonyx/css-module-class-lister) [![dependencies Status](https://david-dm.org/Dudeonyx/css-module-class-lister/status.svg)](https://david-dm.org/Dudeonyx/css-module-class-lister) [![devDependencies Status](https://david-dm.org/Dudeonyx/css-module-class-lister/dev-status.svg)](https://david-dm.org/Dudeonyx/css-module-class-lister?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/Dudeonyx/css-module-class-lister.svg?branch=master)](https://travis-ci.org/Dudeonyx/css-module-class-lister) [![dependencies Status](https://david-dm.org/Dudeonyx/css-module-class-lister/status.svg)](https://david-dm.org/Dudeonyx/css-module-class-lister) [![devDependencies Status](https://david-dm.org/Dudeonyx/css-module-class-lister/dev-status.svg)](https://david-dm.org/Dudeonyx/css-module-class-lister?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **Add multiple classes from CSS module style objects** ✨
 
