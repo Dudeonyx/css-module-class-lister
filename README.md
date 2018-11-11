@@ -25,7 +25,7 @@ import classLister from 'css-module-class-lister';
 //   'd-flex-c': 'App_d-flex-c__xpDp1',
 // };
 
-const classes = classLister(styles);
+const classes = classLister(styles);  // Can be any name, doesn't have to be classes
 
 const App = (props) => {
     return (
@@ -39,18 +39,20 @@ export default App;
 
   ```
 
-Note: 'bold' is ignored since it is not defined in styles.module.css
+~~Note: 'bold' is ignored since it is not defined in styles.module.css~~
+
+Edit: As of version 1.1.0 undefined classes are kept and added but obviously without the hash
 
 This results in:
 
   ```html
-   <div class="App_App__3TjUG App_d-flex-c__xpDp1">
+   <div class="App_App__3TjUG bold App_d-flex-c__xpDp1">
      <p>Blah Blah Blah</p>
    </div>
 
   ```
 
-It can be used for conditional classes by having your condition statement generate an array of classes which you can spread using ... as arguments for your classes(or whatever you name it function).
+It can be used for conditional classes by having your condition statement generate an array of classes which you use the argument for your classes(or whatever you name it) function.
 
 E.g.
 
@@ -63,12 +65,13 @@ E.g.
    }
 
    ```
+
 Then use myClasses like this:
 
   ```javascript
   const App = (props) => {
     return (
-      <div className={classes(...myClasses)}>
+      <div className={classes(myClasses)}>
         <p>Blah Blah Blah</p>
       </div>
     );
