@@ -1,6 +1,6 @@
 {
   "name": "css-module-class-lister",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A module to increase ease and readability when adding multiple classes from CSS modules",
   "main": "./lib/index.js",
   "scripts": {

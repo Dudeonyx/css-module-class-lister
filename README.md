@@ -4,7 +4,7 @@
 
 **Add multiple classes from CSS module style objects** ✨
 
-Adding multiple classes from CSS module style objects has never been easier and readable
+Adding multiple classes from CSS module style objects has never been easier and as readable
 
 # Installation
 
@@ -51,26 +51,34 @@ This results in:
 
   ```
 
-It can be used for conditional classes by having your condition statement generate an array of classes which you use the argument for your classes(or whatever you name it) function.
+It can be used for conditional classes by having your condition statement generate an array of classes which you use as the argument for your classes(or whatever you name it) function.
 
 E.g.
 
    ```javascript
-   const myClasses = [];
+   let conditionalClasses = [];
    if (condition) {
-     classes.push('a-class', 'b-class');
+     conditionalClasses.push('a-class', 'b-class');
    } else {
-     classes.push('b-class', 'c-class');
+     conditionalClasses.push('b-class', 'c-class');
    }
-
    ```
+**OR**
 
-Then use myClasses like this:
+```javascript
+let conditionalClasses = [];
+   if (condition) {
+     conditionalClasses = ['a-class', 'b-class'];
+   } else {
+     conditionalClasses = ['b-class', 'c-class'];
+   }
+```
+Then use conditionalClasses like this:
 
   ```javascript
   const App = (props) => {
     return (
-      <div className={classes(myClasses)}>
+      <div className={classes(conditionalClasses)}>
         <p>Blah Blah Blah</p>
       </div>
     );
